@@ -1,0 +1,14 @@
+app-single-country:focus {
+  outline: none;
+}
+app-single-country {
+  cursor: pointer;
+}
+.wrapper {
+  justify-content: space-between;
+}
+@media (max-width: 576px) {
+  .wrapper {
+    justify-content: center;
+  }
+}

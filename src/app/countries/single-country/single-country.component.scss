@@ -1,0 +1,16 @@
+.card{
+    width: 15rem;
+    height: 45vh;
+    .img{
+        height: 20vh;
+        object-fit: cover;
+        width: 100%;
+    }
+    .highlight{
+        font-weight: 600;
+    }
+}
+.dark{
+    background-color: #2B3743!important;
+    color: white;
+}

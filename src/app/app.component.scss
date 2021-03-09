@@ -1,0 +1,27 @@
+nav {
+  border-bottom: 1px solid rgba(20, 20, 20, 0.1);
+  button {
+    border: 1px solid rgba(20, 20, 20, 0.2);
+  }
+  svg{
+    margin-right:5px;
+  }
+}
+
+.dark{
+  background-color: #2B3743!important;
+  color: white;
+}
+
+.dark-btn{
+  background-color: #2B3743!important;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.2)!important;
+}
+.wrapper{
+  background-color: #202D36;
+  min-height: 100vh;
+}
+a:focus{
+  color: white!important;
+}

@@ -1,0 +1,20 @@
+<div class="card mr-1" [ngClass]="{ dark: darkMode }">
+  <img
+    class="card-img-top img-fluid img"
+    [src]="country.flag"
+    [alt]="country.name"
+  />
+  <div class="card-body">
+    <h5 class="card-title highlight">{{ country.name }}</h5>
+    <p class="card-text">
+      <span class="highlight">Population: </span
+      >{{ country.population | transform }}
+    </p>
+    <p class="card-text">
+      <span class="highlight">Region: </span>{{ country.region }}
+    </p>
+    <p class="card-text">
+      <span class="highlight">Capital: </span>{{ country.capital }}
+    </p>
+  </div>
+</div>

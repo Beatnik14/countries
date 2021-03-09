@@ -1,0 +1,82 @@
+<div class="container mb-5 mt-5">
+  <button
+    [ngClass]="{ 'dark-btn': darkMode }"
+    class="btn btn-light button"
+    [routerLink]="['../']"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="16"
+      height="16"
+      fill="currentColor"
+      class="bi bi-arrow-left"
+      viewBox="0 0 16 16"
+    >
+      <path
+        fill-rule="evenodd"
+        d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"
+      />
+    </svg>
+    Back
+  </button>
+</div>
+
+<div
+  class="container d-flex justify-content-between parent"
+  *ngIf="country"
+  [ngClass]="{ dark: darkMode }"
+>
+  <div class="flag">
+    <img
+      class="card-img-top img-fluid img"
+      [src]="country.flag"
+      [alt]="country.name"
+    />
+  </div>
+  <div class="info">
+    <h1>{{ country.name }}</h1>
+    <div class="details">
+      <div class="details-1">
+        <p>
+          <span class="highlight"> Native Name: </span> {{ country.nativeName }}
+        </p>
+        <p>
+          <span class="highlight">Population: </span>
+          {{ country.population | transform }}
+        </p>
+        <p><span class="highlight">Region: </span> {{ country.region }}</p>
+        <p>
+          <span class="highlight">Sub Region: </span> {{ country.subregion }}
+        </p>
+        <p><span class="highlight">Capital: </span> {{ country.capital }}</p>
+      </div>
+      <div class="details-2">
+        <p>
+          <span class="highlight"> Top level domain: </span
+          >{{ country.topLevelDomain }}
+        </p>
+        <p>
+          <span class="highlight">Currencies: </span>
+          <span *ngFor="let c of country.currencies">{{ c.name + " " }}</span>
+        </p>
+        <p>
+          <span class="highlight"> Languages: </span>
+          <span *ngFor="let l of country.languages">{{ l.name + " " }}</span>
+        </p>
+      </div>
+    </div>
+    <div class="borders">
+      <p>
+        <span class="highlight">Border Countries: </span>
+        <button
+          [ngClass]="{ 'dark-btn': darkMode }"
+          [routerLink]="['/countries', b]"
+          class="btn btn-light m-1"
+          *ngFor="let b of country.borders"
+        >
+          <span *ngIf="b | country | async as country">{{ country.name }}</span>
+        </button>
+      </p>
+    </div>
+  </div>
+</div>

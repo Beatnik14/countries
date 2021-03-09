@@ -1,0 +1,10 @@
+<div class="container p-0 mt-3" *ngIf="countries | async as countries">
+  <div class="d-flex flex-wrap wrapper">
+    <app-single-country
+      *ngFor="let country of countries"
+      class="mb-3"
+      [country]="country"
+      [routerLink] = "['/countries', country.alpha3Code]"
+    ></app-single-country>
+  </div>
+</div>
