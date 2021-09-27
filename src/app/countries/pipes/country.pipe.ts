@@ -12,9 +12,9 @@ export class CountryPipe implements PipeTransform {
 
   transform(value: string):Observable<ICountryFullInfo> {
     return this.apiService.getCountry(value)
-    
-    
-    
+
+
+
   }
 
 }

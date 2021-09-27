@@ -3,25 +3,31 @@ nav {
   button {
     border: 1px solid rgba(20, 20, 20, 0.2);
   }
-  svg{
-    margin-right:5px;
+  svg {
+    margin-right: 5px;
   }
 }
 
-.dark{
-  background-color: #2B3743!important;
+.dark {
+  background-color: #2b3743 !important;
   color: white;
 }
 
-.dark-btn{
-  background-color: #2B3743!important;
+.dark-btn {
+  background-color: #2b3743 !important;
   color: white;
-  border: 1px solid rgba(255, 255, 255, 0.2)!important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
 }
-.wrapper{
-  background-color: #202D36;
+
+.wrapper {
+  background-color: #202d36;
   min-height: 100vh;
 }
-a:focus{
-  color: white!important;
+
+a:hover {
+  color: rgb(114, 114, 114) !important;
+}
+
+.dark:hover {
+  color: rgb(207, 206, 206) !important;
 }

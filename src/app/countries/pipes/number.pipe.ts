@@ -7,4 +7,5 @@ export class NumberPipe implements PipeTransform {
   transform(value: string) {
     return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
   }
+
 }

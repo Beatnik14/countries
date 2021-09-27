@@ -10,7 +10,7 @@ import { map } from 'rxjs/operators';
 })
 export class ApiService {
   apiUrl = environment.apiUrl;
-  getAll = this.apiUrl + 'all';
+  getAll = `${this.apiUrl}all`;
   constructor(private http: HttpClient) {}
 
   countries$ = this.http.get<ICountryFullInfo[]>(this.getAll);
@@ -35,7 +35,7 @@ export class ApiService {
     map(([countries, search, select]) => {
       if (search != this.lastResult) {
         const result = countries.filter((country) =>
-          country.name.includes(search)
+          country.name.toLowerCase().includes(search)
         );
         this.lastResult = search;
         return result;
